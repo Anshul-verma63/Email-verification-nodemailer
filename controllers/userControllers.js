@@ -18,7 +18,7 @@ const sendMail = (userid, email, res) => {
     from: process.env.Email,
     to: email,
     subject: "Email VERIFICATION",
-    html: `To verify your mail <a href="http://localhost:9000/api/v1/user/verify/${userid}">Verify_here</a>`,
+    html: `To verify your mail <a href="https://email-verification-nodemailer.onrender.com/api/v1/user/verify/${userid}">Verify_here</a>`,
   };
 
   transport.sendMail(mailOption, (error, info) => {
